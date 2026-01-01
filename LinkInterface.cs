@@ -61,7 +61,7 @@ namespace ResoniteLink
                     {
                         case WebSocketMessageType.Text:
                             var response = System.Text.Json.JsonSerializer.Deserialize<Response>(
-                                new MemoryStream(buffer, 0, message.Count));
+                                new MemoryStream(buffer, 0, message.Count), _options);
 
                             if (_pendingResponses.TryRemove(response.SourceMessageID, out var completion))
                                 completion.SetResult(response);
