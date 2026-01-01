@@ -13,4 +13,7 @@ namespace ResoniteLink
         [JsonPropertyName("enumType")]
         public string EnumType { get; set; }
     }
+
+    [JsonDerivedType(typeof(Field_Enum), "enum")]
+    public partial class Member { }
 }
