@@ -126,8 +126,8 @@ namespace ResoniteLink
                     var childId = await AddChild(arguments.Trim());
 
                     // Immediatelly select the new child
-                    if(childId != null)
-                        await SelectSlot(childId);
+                    if (childId != null)
+                        Console.WriteLine($"Child added. ID: {childId}");
 
                     break;
 
