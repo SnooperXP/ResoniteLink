@@ -15,6 +15,14 @@ namespace ResoniteLink
         /// </summary>
         [JsonPropertyName("targetId")]
         public string TargetID { get; set; }
+
+        /// <summary>
+        /// The type of target that this reference accepts.
+        /// Note: This is only for reference. It does not need to be provided when setting a value.
+        /// However the target must conform to this type.
+        /// </summary>
+        [JsonPropertyName("targetType")]
+        public string TargetType { get; set; }
     }
 
     [JsonDerivedType(typeof(Reference), "reference")]
