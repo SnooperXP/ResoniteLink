@@ -14,14 +14,28 @@ namespace ResoniteLink
         public Slot CurrentSlot { get; private set; }
         public Component CurrentComponent { get; private set; }
 
+        // The prefix prevents multiple REPL sessions from colliding with each other's ID's
+        string _prefix;
+
         int _idPool;
 
-        string AllocateId() => $"REPL_{_idPool++:X}";
+        string AllocateId() => $"REPL_{_prefix}_{_idPool++:X}";
 
-        public REPL_Controller(LinkInterface link, ICommandIO messaging)
+        public REPL_Controller(LinkInterface link, ICommandIO messaging, string prefix = null)
         {
             _link = link;
             _messaging = messaging;
+
+            if (prefix == null)
+            {
+                // If none is provided, just generate one at random
+                // This isn't the most robust, as it can collide, but usually there's only a handful sessions at most
+                // so this should work well enough for these purposes
+                var r = new Random();
+                _prefix = r.Next().ToString("X");
+            }
+            else
+                _prefix = prefix;
         }
 
         public async Task RunLoop()
