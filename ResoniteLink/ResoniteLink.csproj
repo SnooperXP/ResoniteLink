@@ -11,6 +11,7 @@
     <PackageLicenseUrl>https://github.com/Yellow-Dog-Man/ResoniteLink/blob/master/LICENSE.txt</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/Yellow-Dog-Man/ResoniteLink</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -93,6 +94,10 @@
 
   <ItemGroup>
     <Folder Include="Models\Assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>

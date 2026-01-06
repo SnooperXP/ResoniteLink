@@ -14,10 +14,12 @@
     <PackageLicenseUrl>https://github.com/Yellow-Dog-Man/ResoniteLink/blob/master/LICENSE.txt</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/Yellow-Dog-Man/ResoniteLink</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ResoniteLink\ResoniteLink.csproj" />
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
