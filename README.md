@@ -253,6 +253,7 @@ We'll accept certain contributions to this repository if they meet our quality s
 - Adding helper methods to the models
     - E.g. to make certain common interactions easier (e.g. simpler parsing for engine primitives)
 - Writing more examples & guides
+- Writing unit tests - tests are good!
 
 We reserve right to reject any contributions if we feel they are not suitable for this repository - however you can always publish them as your own library!
 
