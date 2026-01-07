@@ -1,6 +1,8 @@
 - name: Basics
 - name: Getting Started
   href: started.md
+- name: Why is ResoniteLink that way?
+  href: why.md
 
 - name: APIs
 - name: WebSocket API

@@ -18,7 +18,9 @@ You can get Resonite completely for free on Steam here: https://store.steampower
 # What is ResoniteLink?
 While Resonite has a heavy focus on building things in-game, interoperability with external tools and scripts is also important, as it plugs Resonite into a larger ecosystem. ResoniteLink is a simple WebSocket protocol designed as a foundational building block to allow anyone to more easily build external tools and interfaces to read and write Resonite's data model.
 
-The protocol closely follow's Resonite's data model and deconstructs it into primitive JSON types which can be used from nearly any programming language. With this, you can integrate Resonite worlds with any tool you can imagine. 
+The protocol closely follow's Resonite's data model and deconstructs it into primitive JSON types which can be used from nearly any programming language. With this, you can integrate Resonite worlds with any tool you can imagine.
+
+You can find the documentation [hosted on GitHub pages](https://yellow-dog-man.github.io/ResoniteLink/).
 
 ## Use case examples
 - Unity/Unreal/Godot/Blender... SDK
@@ -75,22 +77,6 @@ The protocol is not complete and additional functionality will be added over tim
     - When connected to graphical client of Resonite a command will allow requesting render of the scene from particular viewpoint
 - Optionally monitoring fields for changes
 - Sending messages from Resonite to ResoniteLink for custom handling of events
-
-# Why WebSocket?
-- It's pretty commonly supported in lots of languages and enviroments (even ones where raw TCP/UDP isn't)
-- It forms a session with easy back & forth communication
-- Allows either side to initiate sending a message (as compared to HTTP REST API for example)
-- Allows sending binary messages
-    - These allow for more efficient implementation of sending asset data
-
-# Why JSON?
-- It's very ubiquitous and supported in pretty much every common language, often with multiple libraries to choose from
-- It's relatively simple structure of basic value types, lists and dictionaries, which is sufficient to fully decompose Resonite's data model
-
-# Why open source?
-Resonite has a highly creative and skilled community, which has been building outstanding in-game content as well as external tools and mods for the game that open up many more possibilities for Resonite.
-
-By creating this protocol and making the client implementation open, we want to make it easy to build with it and open up even more possibilities and workflows than before. Making this open removes a lot of the friction that's normally associated with decompiling and reverse engineering parts of the engine.
 
 # How can I help?
 If you'd like to help us and other community members, there's a number of ways to contribute!
