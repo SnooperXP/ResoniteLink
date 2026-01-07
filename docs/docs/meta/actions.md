@@ -120,3 +120,7 @@ If manual:
 | Name  | Description                                 | Default  | Required |
 |-------|---------------------------------------------|----------|----------|
 | `ref` | The branch or tag the workflow will run on. | `master` | false    |
+
+#### Deployment environment
+
+- `github-pages` to https://yellow-dog-man.github.io/ResoniteLink/
