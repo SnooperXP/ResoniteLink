@@ -6,7 +6,7 @@ As such, please take care when building with this protocol in this stage and be 
 This stage won't likely run long. Once we're happy that we got some feedback, we'll remove the label and will be a lot more hesitant to introduce breaking changes, providing more stability.
 
 # Nuget Package
-Coming soon!
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![NuGet](https://img.shields.io/nuget/v/YellowDogMan.ResoniteLink.svg)](https://www.nuget.org/packages/YellowDogMan.ResoniteLink)
 
 # What is Resonite?
 Resonite is a social VR sandbox where you can build anything in-game, realtime and with realtime collabration and implicit network synchronization. It is like being inside a virtual universe / game-engine that you have control over and that you can build together with your friends or colleagues.
