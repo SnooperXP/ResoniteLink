@@ -108,6 +108,19 @@ namespace ResoniteLink
             public override Type ValueType => typeof(<#=type#>);
         }
 
+        public class Array_<#=type#> : SyncArray
+        {
+            [JsonPropertyName("values")]
+            public List<<#=type#>> Values { get; set; }
+
+            [JsonIgnore]
+            public override Type ElementType => typeof(<#=type#>);
+        }
+
+        [JsonDerivedType(typeof(Field_<#=type#>), "<#=type#>")]
+        [JsonDerivedType(typeof(Array_<#=type#>), "<#=type#>[]")]
+        public partial class Member { }
+
         <#
         if(!nonNullableTypes.Contains(type))
         {
@@ -129,9 +142,6 @@ namespace ResoniteLink
             <#
         }
         #>
-
-        [JsonDerivedType(typeof(Field_<#=type#>), "<#=type#>")]
-        public partial class Member { }
 
         <#
     }
