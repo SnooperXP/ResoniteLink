@@ -57,6 +57,10 @@ ResoniteLink opens up a lot of new possibilities. However there are certain use-
 - Replacement for in-game scripting
     - While you can use this to control in-game objects with external scripts, it's still recommended to use ProtoFlux where possible
     - Using this to control things requires running an external program and to be the host of the session
+- Serialization for long term storage
+    - Saving the returned JSON and sending it to a different version of Resonite is NOT supported
+    - ResoniteLink gives you snapshot of what's currently in world for the version of Resonite you're using, but isn't designed for long term storage
+    - Resonite's inner data model has mechanisms for long term compatibility and has upgrade mechanisms. Those aren't part of ResoniteLink - you need to let Resonite handle those upgrades
 
 # What is purpose of this repository?
 There are two core purposes of this repository:
