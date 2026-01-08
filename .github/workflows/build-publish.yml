@@ -34,7 +34,7 @@ jobs:
           dotnet-project-path: '${{ env.PROJECT_PATH }}'
 
       - name: 'Publish ResoniteLink'
-        if: ${{ !env.IS_RELEASE == 'true' }}
+        if: ${{ env.IS_RELEASE == 'true' }}
         uses: Yellow-Dog-Man/composite-actions-templates/.github/actions/dotnet-build-push-nuget/@main
         with:
           dotnet-nuget-auth-token: ${{ secrets.NUGET_TOKEN }}
