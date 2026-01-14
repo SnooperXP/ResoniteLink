@@ -25,6 +25,12 @@ There are a few community projects built around or with ResoniteLink:
 |---------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | [Earthmark/ResoLink-rs](https://github.com/Earthmark/ResoLink-rs)                     | Rust bindings and GRPC bridge for ResoniteLink.                |
 
+## Golang  <img alt="Golang programming language logo. Go text on coloured background." src="https://skillicons.dev/icons?i=go" width="16">
+
+| Repository                                                                    | Description                                            |
+|-------------------------------------------------------------------------------|--------------------------------------------------------|
+| [CyrillusDerg/GoResoniteLink](https://github.com/CyrillusDerg/GoResoniteLink) | Go implementation of REPL with extended functionality. |
+
 If you build something cool, let us know (just create an issue on this repository) with a link, and we'll add it when we can!
 
 # What is Resonite?
