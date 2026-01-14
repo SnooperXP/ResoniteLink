@@ -12,11 +12,18 @@ This stage won't likely run long. Once we're happy that we got some feedback, we
 
 There are a few community projects built around or with ResoniteLink:
 
-| Repository                                                                            | Language | Description                                                     |
-|---------------------------------------------------------------------------------------|----------|-----------------------------------------------------------------|
-| [RobertBaruch/pyresonitelink](https://github.com/RobertBaruch/pyresonitelink)         | Python   | Python bindings for ResoniteLink                                |
-| [JackTheFoxOtter/ResoniteLink.py](https://github.com/JackTheFoxOtter/ResoniteLink.py) | Python   | Python wrapper for ResoniteLink (still under heavy development) |
-| [Earthmark/ResoLink-rs](https://github.com/Earthmark/ResoLink-rs)                     | Rust     | Rust bindings and GRPC bridge for ResoniteLink.                 |
+## Python <img alt="Python programming language logo. Two snakes interlaced." src="https://skillicons.dev/icons?i=py" width="16">
+
+| Repository                                                                            | Description                                                     |
+|---------------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| [RobertBaruch/pyresonitelink](https://github.com/RobertBaruch/pyresonitelink)         | Python bindings for ResoniteLink                                |
+| [JackTheFoxOtter/ResoniteLink.py](https://github.com/JackTheFoxOtter/ResoniteLink.py) | Python wrapper for ResoniteLink (still under heavy development) |
+
+## Rust <img alt="Rust programming language logo. R letter in a dented wheel." src="https://skillicons.dev/icons?i=rust" width="16">
+
+| Repository                                                                            | Description                                                    |
+|---------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| [Earthmark/ResoLink-rs](https://github.com/Earthmark/ResoLink-rs)                     | Rust bindings and GRPC bridge for ResoniteLink.                |
 
 If you build something cool, let us know (just create an issue on this repository) with a link, and we'll add it when we can!
 
