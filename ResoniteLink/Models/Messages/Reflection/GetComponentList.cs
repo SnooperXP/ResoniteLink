@@ -5,8 +5,10 @@ using System.Text.Json.Serialization;
 
 namespace ResoniteLink
 {
-    public class RequestComponentList : Message
+    public class GetComponentList : Message
     {
+        public const string ALL_COMPONENTS = "*";
+
         /// <summary>
         /// The path in the category list that will be returned.
         /// Null or empty string will return the root categories.

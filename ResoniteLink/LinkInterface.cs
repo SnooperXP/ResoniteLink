@@ -171,6 +171,12 @@ namespace ResoniteLink
         public Task<AssetData> ImportAudioClip(ImportAudioClipFile request) => SendMessage<ImportAudioClipFile, AssetData>(request);
         public Task<AssetData> ImportAudioClip(ImportAudioClipRawData request) => SendMessage<ImportAudioClipRawData, AssetData>(request);
 
+        public Task<ComponentList> RequestComponentList(string categoryPath) => SendMessage<GetComponentList, ComponentList>(
+            new GetComponentList() { CategoryPath = categoryPath });
+        public Task<ComponentList> RequestAllComponents() => SendMessage<GetComponentList, ComponentList>(
+            new GetComponentList() { CategoryPath = GetComponentList.ALL_COMPONENTS });
+        public Task<ComponentList> RequestComponentList(GetComponentList request) => SendMessage<GetComponentList, ComponentList>(request);
+
         #endregion
 
         public void Dispose()
