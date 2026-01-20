@@ -291,10 +291,12 @@ The ID's are NOT persistent. After saving the world and loading it again, they w
 The protocol is not complete and additional functionality will be added over time. Some crucial for certain use-cases and some convenience to make certain use-patterns easier. Here are some features that are currently planned to be added at some point:
 
 - Support more data model types
-    - Arrays
     - Dictionaries
     - SyncVars
-- Asset API for generating/importing assets externally (Textures, Meshes, Audio, Animations...)
+- Support more asset types
+    - Animations
+    - Gaussian Splats
+    - 3D Textures
     - Reading assets will not likely be supported until we introduce more robust asset protection system
 - Type reflection - ability to fetch list and structure of supported component types by the current instance
     - You'll be able to use this for component type hinting for your tooling
