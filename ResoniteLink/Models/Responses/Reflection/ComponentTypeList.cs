@@ -5,13 +5,13 @@ using System.Text.Json.Serialization;
 
 namespace ResoniteLink
 {
-    public class ComponentDefinitionList : Response
+    public class ComponentTypeList : Response
     {
         /// <summary>
-        /// List of components in requested category
+        /// List of component types in the requested category
         /// </summary>
-        [JsonPropertyName("components")]
-        public List<ComponentDefinition> Components { get; set; }
+        [JsonPropertyName("componentTypes")]
+        public List<string> ComponentTypes { get; set; }
 
         /// <summary>
         /// List of subcategories in the requested category

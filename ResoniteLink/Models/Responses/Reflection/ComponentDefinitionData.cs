@@ -5,12 +5,12 @@ using System.Text.Json.Serialization;
 
 namespace ResoniteLink
 {
-    public class TypeDefinitionResult : Response
+    public class ComponentDefinitionData : Response
     {
         /// <summary>
-        /// The structured definition of the type
+        /// Definition of the component that was requested
         /// </summary>
         [JsonPropertyName("definition")]
-        public TypeDefinition Definition { get; set; }
+        public ComponentDefinition Definition { get; set; }
     }
 }

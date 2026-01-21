@@ -171,14 +171,20 @@ namespace ResoniteLink
         public Task<AssetData> ImportAudioClip(ImportAudioClipFile request) => SendMessage<ImportAudioClipFile, AssetData>(request);
         public Task<AssetData> ImportAudioClip(ImportAudioClipRawData request) => SendMessage<ImportAudioClipRawData, AssetData>(request);
 
-        public Task<ComponentDefinitionList> GetComponentList(string categoryPath) => SendMessage<GetComponentDefinitionList, ComponentDefinitionList>(
-            new GetComponentDefinitionList() { CategoryPath = categoryPath });
-        public Task<ComponentDefinitionList> GetAllComponents() => SendMessage<GetComponentDefinitionList, ComponentDefinitionList>(
-            new GetComponentDefinitionList() { CategoryPath = ResoniteLink.GetComponentDefinitionList.ALL_COMPONENTS });
-        public Task<ComponentDefinitionList> GetComponentList(GetComponentDefinitionList request) => SendMessage<GetComponentDefinitionList, ComponentDefinitionList>(request);
-        public Task<TypeDefinitionResult> GetTypeDefinition(GetTypeDefinition request) => SendMessage<GetTypeDefinition, TypeDefinitionResult>(request);
-        public Task<TypeDefinitionResult> GetTypeDefinition(string typename) => 
-            SendMessage<GetTypeDefinition, TypeDefinitionResult>(new GetTypeDefinition() { Type = typename });
+        public Task<ComponentTypeList> GetComponentTypes(string categoryPath) => SendMessage<GetComponentTypeList, ComponentTypeList>(
+            new GetComponentTypeList() { CategoryPath = categoryPath });
+        public Task<ComponentTypeList> GetAllComponentTypes() => SendMessage<GetComponentTypeList, ComponentTypeList>(
+            new GetComponentTypeList() { CategoryPath = ResoniteLink.GetComponentTypeList.ALL_COMPONENTS });
+        public Task<ComponentTypeList> GetComponentTypeList(GetComponentTypeList request) => SendMessage<GetComponentTypeList, ComponentTypeList>(request);
+
+        public Task<ComponentDefinitionData> GetComponentDefinition(GetComponentDefinition request) =>
+            SendMessage<GetComponentDefinition, ComponentDefinitionData>(request);
+
+        public Task<ComponentDefinitionData> GetComponentDefinition(string type, bool flattened) => SendMessage<GetComponentDefinition, ComponentDefinitionData>(
+            new GetComponentDefinition() { ComponentType = type, Flattened = flattened });
+        public Task<TypeDefinitionData> GetTypeDefinition(GetTypeDefinition request) => SendMessage<GetTypeDefinition, TypeDefinitionData>(request);
+        public Task<TypeDefinitionData> GetTypeDefinition(string typename) => 
+            SendMessage<GetTypeDefinition, TypeDefinitionData>(new GetTypeDefinition() { Type = typename });
 
         #endregion
 

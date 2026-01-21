@@ -11,13 +11,12 @@ namespace ResoniteLink
     public class ComponentDefinition
     {
         /// <summary>
-        /// Full typename of the component. This is the same type that can be used to instantiate the component.
-        /// Be careful with generic types - those require specifying generic arguments as well when instantiating.
-        /// You can resolve this type to get TypeDefinition which contains structured information that will let you
-        /// construct the full typename.
+        /// Structured type definition of this component. This is particularly important for generic components, as it will
+        /// contain information about the generic parameters and constraints. These generic parameters need to be substituted
+        /// for the desired type in the members.
         /// </summary>
         [JsonPropertyName("type")]
-        public string Type { get; set; }
+        public TypeDefinition Type { get; set; }
 
         /// <summary>
         /// List of all members and their definitions that this container has.

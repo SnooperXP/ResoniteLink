@@ -15,8 +15,9 @@ namespace ResoniteLink
     [JsonDerivedType(typeof(AssetData), "assetData")]
     [JsonDerivedType(typeof(SessionData), "sessionData")]
 
-    [JsonDerivedType(typeof(TypeDefinitionResult), "typeDefinition")]
-    [JsonDerivedType(typeof(ComponentDefinitionList), "componentDefinitionList")]
+    [JsonDerivedType(typeof(TypeDefinitionData), "typeDefinitionData")]
+    [JsonDerivedType(typeof(ComponentDefinitionData), "componentDefinitionData")]
+    [JsonDerivedType(typeof(ComponentTypeList), "componentTypeList")]
     public class Response
     {
         /// <summary>
