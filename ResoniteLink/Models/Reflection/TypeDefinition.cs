@@ -46,6 +46,12 @@ namespace ResoniteLink
         public string Name { get; set; }
 
         /// <summary>
+        /// Abstract types cannot ever be instantiated - they are just used as base types for other types
+        /// </summary>
+        [JsonPropertyName("isAbstract")]
+        public bool IsAbstract { get; set; }
+
+        /// <summary>
         /// Indicates if this type is an interface
         /// </summary>
         [JsonPropertyName("isInterface")]
@@ -75,6 +81,12 @@ namespace ResoniteLink
         /// </summary>
         [JsonPropertyName("isEnum")]
         public bool IsEnum { get; set; }
+
+        /// <summary>
+        /// Indicates if this type represents a component
+        /// </summary>
+        [JsonPropertyName("isComponent")]
+        public bool IsComponent { get; set; }
 
         /// <summary>
         /// For generic types, this lists all the generic arguments for this type when they're provided.
