@@ -84,6 +84,12 @@ namespace ResoniteLink
         public bool IsEnginePrimitive { get; set; }
 
         /// <summary>
+        /// Indicates if this represents a value type (e.g. struct)
+        /// </summary>
+        [JsonPropertyName("isValueType")]
+        public bool IsValueType { get; set; }
+
+        /// <summary>
         /// Indicates if this datatype is an enum. You can request details about the enum, including its values separately.
         /// </summary>
         [JsonPropertyName("isEnum")]
@@ -119,7 +125,7 @@ namespace ResoniteLink
         /// This is only populated when the type is a generic type and is NOT a generic type definition.
         /// </summary>
         [JsonPropertyName("genericArguments")]
-        public List<string> GenericArguments { get; set; }
+        public List<TypeReference> GenericArguments { get; set; }
 
         /// <summary>
         /// List of generic parameters and their constraints for generic types.

@@ -8,9 +8,9 @@ namespace ResoniteLink
     public class ReferenceDefinition : MemberDefinition
     {
         /// <summary>
-        /// Datatype of the target of this reference. This is a fully specified type including assembly name and generic parameters.
+        /// Datatype of the target of this reference. This is a full type reference, so it can contain other generic arguments/parameters.
         /// </summary>
         [JsonPropertyName("targetType")]
-        public string TargetType { get; set; }
+        public TypeReference TargetType { get; set; }
     }
 }

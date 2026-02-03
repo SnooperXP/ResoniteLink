@@ -19,7 +19,7 @@ namespace ResoniteLink
         /// They can be combined with types constraints.
         /// </summary>
         [JsonPropertyName("types")]
-        public List<string> Types { get; set; }
+        public List<TypeReference> Types { get; set; }
 
         /// <summary>
         /// Requires that this parameter is an unmanaged type
